@@ -17,8 +17,6 @@
     <link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <!-- datepicker -->
-    <link type="text/css" rel="stylesheet" href="dist/vanilla-datetimerange-picker.css">
     
     <!--fonts google-->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
@@ -29,9 +27,6 @@
     <![endif]-->
   </head>
   <body>
-
-
-
     <!--PRELOADER-->
     <div id="preloader">
       <div id="status">
@@ -98,7 +93,6 @@
     <div class="content-wrap">
       <!--CONTENT-->
       <div class="content">
-
         <!--HOME-->
         <section id="home">
           <div class="container">
@@ -131,12 +125,11 @@
                   <div class="wrap-about">
                     <div class="w-content">
                       <p class="head-about">
-
                         Design is the method of putting form and content together. Design, just as art, has multiple definitions there is no single definition. Design can be art. Design can be aesthetics. Design is so simple, that's why it is so complicated.
                       </p>
                       
                       <h5 class="name">
-                        ...
+                        M. Reza
                       </h5>
                       <img alt="signature" src="img/signature.png">
                     </div>
@@ -151,7 +144,7 @@
                           <tr>
                             <td class="title">Name </td>
                             <td class="break">:</td>
-                            <td> ...</td>
+                            <td> M. Reza</td>
                           </tr>
                           <tr>
                             <td class="title">Phone </td>
@@ -877,25 +870,19 @@
                 <p class="content-detail">
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                 </p>
-              </div>
 
+              </div>
               <div class="col-md-9 content-right">
                 <form>
-                    <div class="group">
-                        <div>
-                            <input required="" type="text" id="datetimerange-input1" style="text-align:center">
-                        </div>
-                        <span class="highlight"></span><span class="bar"></span><label>Date</label>
-                    </div>
-                    <div class="group">
-                        <input required="" type="text"><span class="highlight"></span><span class="bar"></span><label>Name</label>
-                    </div>
-                    <div class="group">
-                        <input required="" type="email"><span class="highlight"></span><span class="bar"></span><label>Email</label>
-                    </div>
-                    <div class="group">
-                        <textarea required=""></textarea><span class="highlight"></span><span class="bar"></span><label>Message</label>
-                    </div>
+                  <div class="group">
+                    <input required="" type="text"><span class="highlight"></span><span class="bar"></span><label>Name</label>
+                  </div>
+                  <div class="group">
+                    <input required="" type="email"><span class="highlight"></span><span class="bar"></span><label>Email</label>
+                  </div>
+                  <div class="group">
+                    <textarea required=""></textarea><span class="highlight"></span><span class="bar"></span><label>Message</label>
+                  </div>
                   <input id="sendMessage" name="sendMessage" type="submit" value="Send Message">
                 </form>
               </div>
@@ -903,11 +890,8 @@
           </div>
         </section>
         <!--/.CONTACT END-->
-
         
-
-        
-        <!-- FOOTER-->
+        <!--FOOTER-->
         <footer>
           <div class="footer-top">
             <ul class="socials">
@@ -931,7 +915,7 @@
             </div>
           </div>
         </footer>
-        <!--/.FOOTER-END -->
+        <!--/.FOOTER-END-->
 
       <!--/.CONTENT END-->
       </div>
@@ -953,72 +937,15 @@
 
     <!-- datapicker -->
     <!-- <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" type="text/javascript"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/gh/alumuko/vanilla-datetimerange-picker@latest/dist/vanilla-datetimerange-picker.js"></script> -->
-    <!-- change date dd/mm/yyyy ke mm/dd/yyyy-->
     <script src="momentjs/latest/moment.min.js" type="text/javascript"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alumuko/vanilla-datetimerange-picker@latest/dist/vanilla-datetimerange-picker.js"></script> -->
     <script src="momentjs/latest/vanilla-datetimerange-picker.js"></script>
-    
-
     <script>
-            var drp;
-            var rangeChange = function(){
-                drp.updateRanges({
-                    'Last 3 Days': [moment().subtract(2, 'days').startOf('day'), moment().endOf('day')],
-                    'This Year': [moment().startOf('year').startOf('day'), moment().endOf('year').endOf('day')],
-                });
-            };
-            window.addEventListener("load", function (event) {
-                drp = new DateRangePicker('datetimerange-input1',
-                    {
-                        //startDate: '2000-01-01',
-                        //endDate: '2000-01-03',
-                        //minDate: '2021-07-15 15:00',
-                        //maxDate: '2021-08-16 15:00',
-                        //maxSpan: { "days": 9 },
-                        //showDropdowns: true,
-                        //minYear: 2020,
-                        //maxYear: 2022,
-                        //showWeekNumbers: true,
-                        //showISOWeekNumbers: true,
-                        timePicker: true,
-                        //timePickerIncrement: 10,
-                        timePicker24Hour: true,
-                        //timePickerSeconds: true,
-                        //showCustomRangeLabel: false,
-                        alwaysShowCalendars: true,
-                        //opens: 'center',
-                        //drops: 'up',
-                        singleDatePicker: false,
-                        //autoApply: true,
-                        //linkedCalendars: false,
-                        //isInvalidDate: function(m){
-                        //    return m.weekday() == 3;
-                        //},
-                        //isCustomDate: function(m){
-                        //    return "weekday-" + m.weekday();
-                        //},
-                        //autoUpdateInput: false,
-                        ranges: {
-                            'Today': [moment().startOf('day'), moment().endOf('day')],
-                            'Yesterday': [moment().subtract(1, 'days').startOf('day'), moment().subtract(1, 'days').endOf('day')],
-                            'Last 7 Days': [moment().subtract(6, 'days').startOf('day'), moment().endOf('day')],
-                            'This Month': [moment().startOf('month').startOf('day'), moment().endOf('month').endOf('day')],
-                        },
-                        locale: {
-                            format: "DD-MM-YYYY HH:mm:ss",
-                        }
-                    },
-                    function (start, end) {
-                        alert(start.format() + " - " + end.format());
-                    })
-                //drp.setStartDate('2014/03/01');
-                //drp.setEndDate('2014/03/03');
-                window.addEventListener('apply.daterangepicker', function (ev) {
-                    console.log(ev.detail.startDate.format('DD-MM-YYYY'));
-                    console.log(ev.detail.endDate.format('DD-MM-YYYY'));
-                });
-            });
-        </script>
+        window.addEventListener("load", function (event) {
+            new DateRangePicker('datetimerange-input1');
+            
+        });
+    </script>
     
   </body>
 </html>
